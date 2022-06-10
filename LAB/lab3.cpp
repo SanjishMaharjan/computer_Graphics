@@ -4,13 +4,13 @@
 using namespace std;
 void BLA(float x1 ,float y1,float x2 ,float y2 )
 {
-	 float xinc , yinc , po, dx ,dy;
-	 dx=fabs(x2-x1);
-	 dy=fabs(y2-y1);
+	float xinc , yinc , po, dx ,dy;
+	dx=fabs(x2-x1);
+	dy=fabs(y2-y1);
 
-	 if (x2>x1)
+	if (x2>x1)
 	 xinc=1;
-	 else
+	else
 	 xinc=-1;
 
 	if (y2>y1)
@@ -22,46 +22,46 @@ void BLA(float x1 ,float y1,float x2 ,float y2 )
 
 	if (dx>dy)
 	{
-	 po= 2*dy -dx;
+	 po= 2*dy - dx;
 	 for(int i=0; i<dx ; i++)
-	 {
-	 	if(po<0)
 	 	{
-			x1=x1+xinc;
-			y1=y1+yinc;
-			po=po+2*dy;
-		}
-		else
-		{
-			x1=x1+xinc;
-			y1=y1+yinc;
-			po=po+2*dy-2*dx;
-		}
-		putpixel(x1,x2,YELLOW);
-		delay(100);
-	 }
+		 	if(po<0)
+		 	{
+				x1=x1+xinc;
+				y1=y1+yinc;
+				po=po+2*dy;
+			}
+			else
+			{
+				x1=x1+xinc;
+				y1=y1+yinc;
+				po=po+2*dy-2*dx;
+			}
+			putpixel(x1,x2,YELLOW);
+			delay(100);
+	 	}
 
-}
-else
+	}
+	else
 	{
-	 po= 2*dx -dy;
+	 po= 2*dx - dy;
 	 for(int i=0; i<dy ; i++)
-	 {
-	 	if(po<0)
 	 	{
-			x1=x1;
-			y1=y1+yinc;
-			po=po+2*dx;
-		 }
-		else
-		{
-			x1=x1+xinc;
-			y1=y1+yinc;
-			po=po+2*dx-2*dy;
-		}
-		putpixel(x1,y1,YELLOW);
-		delay(100);
-	 }
+		 	if(po<0)
+		 	{
+				x1=x1;
+				y1=y1+yinc;
+				po=po+2*dx;
+			 }
+			else
+			{
+				x1=x1+xinc;
+				y1=y1+yinc;
+				po=po+2*dx-2*dy;
+			}
+			putpixel(x1,y1,YELLOW);
+			delay(100);
+	 	}
 
 	}
 
