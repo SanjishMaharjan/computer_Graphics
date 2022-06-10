@@ -18,7 +18,7 @@ void BLA(float x1 ,float y1,float x2 ,float y2 )
 	else
 	 yinc=-1;
 
-	 putpixel(x1,y1,RED);
+	putpixel(x1,y1,RED);
 
 	if (dx>dy)
 	{
