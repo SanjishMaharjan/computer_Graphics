@@ -1,7 +1,6 @@
 // Program to draw a ellipse using Midpoint Ellipse drawing Algorithm
 #include<graphics.h>
 #include<iostream>
-#include<conio.h>
 using namespace std;
 void ellipse(int xc,int yc,int a,int b)
 {
@@ -28,7 +27,7 @@ void ellipse(int xc,int yc,int a,int b)
      }
 
 
-    p=b*b*(x+0.25)*(x+0.25)+a*a*(y-1)*(y-1)-a*a*b*b;
+    p=b*b*(x+0.5)*(x+0.5)+a*a*(y-1)*(y-1)-a*a*b*b;
     while(y > 0)
     {
 		if(p <= 0)
@@ -59,7 +58,6 @@ int main()
 	cout<<"Enter the major and minor axes of ellipse"<<endl;
 	cin>>rx>>ry;
     ellipse(xc,yc,rx,ry);
-    closegraph();
     getch();
     return 0;
 }
