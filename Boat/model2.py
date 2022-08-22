@@ -4,14 +4,11 @@ ship = t.Turtle()
 t.bgcolor("#849aa8")
 t.screensize(1920,720)
 t.title("Titanic")
-ship.speed(0)
-# t.showturtle()
-# t.hideturtle()
 ship.width(5)
-t.tracer(0) # to update the tracer most imp step to move boat
+t.tracer(0) # to update the tracer most imp step to move boat and remove animation of drawing
 
 def sun():
-    ship.speed(0)
+
     ship.color('#d2ebcd','#d2ebcd')
     ship.penup() 
     ship.goto(-300,200) 
@@ -19,22 +16,6 @@ def sun():
     ship.begin_fill()
     ship.circle(100)
     ship.end_fill()
-
-def nameShip():
-    ##### To write name of titanic ###############
-    ship.penup()
-    ship.goto(-40,20)   # left side
-    ship.color('white','white')
-    ship.pendown()
-    ship.write(arg = "Titanic ",font = ("Calibri",18,"bold"))
-    
-def descibe():
-    ##### To write name of titanic ###############
-    ship.penup()
-    ship.goto(-300,250)   # left side
-    ship.color('white','white')
-    ship.pendown()
-    ship.write(arg = "This way ship was crashed and lots of people lost their lives in this catestropic accident ",font = ("Calibri",18,"bold"))
 
 def splash(x):
     ship.color("white")
@@ -52,7 +33,7 @@ def splash(x):
     ship.goto(-459+x,33)
  
 def bottompart(x):
-        ship.speed(0)
+        #
         ship.color("#635667","#635667")
         ship.begin_fill()
         ship.penup()
@@ -71,7 +52,7 @@ def bottompart(x):
         splash(x)
 
 def toppart(x):
-    ship.speed(0)
+    
     ship.color("#635667","#635667")
     ship.begin_fill()
     ship.penup()
@@ -97,7 +78,7 @@ def toppart(x):
 
 def railingBottom(x):
     ########### middle segment ###################
-    ship.speed(0)
+    #
     ship.color("#635667")
     ship.begin_fill()
     ship.penup()
@@ -111,7 +92,7 @@ def railingBottom(x):
 
 def railingTop(x): 
     ############## titanic poj wala segment #################
-    ship.speed(0)
+    #
     ship.color("#635667")
     ship.begin_fill()
     ship.penup()
@@ -125,7 +106,7 @@ def railingTop(x):
         
 def handles(x):
     ######## lower handle  ##############
-    ship.speed(0)
+    #
     ship.color("#635667","#635667")
     ship.begin_fill()
     ship.penup()
@@ -185,7 +166,7 @@ def handles(x):
     
     
 def flag(x):
-    ship.speed(0)
+
     ship.color("#635667","#f0e9d6")
     ship.begin_fill()
     ship.penup()
@@ -201,7 +182,7 @@ def flag(x):
 
 def air(x1,x2,y,i):
     ship.color("white")
-    ship.speed(0)
+
     ship.penup()
     ship.goto(x1+i,y)
     ship.pendown()
@@ -210,7 +191,7 @@ def air(x1,x2,y,i):
     
 def water(x1,x2,y,inc):
     ship.color("#d2ebcd")   
-    ship.speed(0)
+
     ship.penup()
     ship.goto(x1+inc*2,y)
     ship.pendown()
@@ -220,7 +201,7 @@ def iceberg():
     # main iceberg
     ship.color("#d2ebcd","#a9ddff")   
     # ship.color("#084b8f","#084b8f")  
-    ship.speed(0)
+
     ship.begin_fill()
     ship.penup()
     ship.goto(200,0)
@@ -325,10 +306,7 @@ for i in range(0,690,5):
 
     ##################### collision paxi ko effect halne thau ##########################
 # to create a crack effect in iceberg
-# t.delay(10)
 icebergAfterCollision()
-nameShip()
-descibe()
 
 
     ############ know coordinate ##########################
